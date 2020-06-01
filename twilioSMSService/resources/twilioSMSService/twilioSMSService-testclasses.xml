@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-8"?><testclasses><twilioSMSService><testclass>com.hybrisapp.twilioSMSService.jalo.TwilioSMSServiceTest</testclass><testclass>com.hybrisapp.twilioSMSService.service.impl.DefaultTwilioSMSServiceServiceIntegrationTest</testclass></twilioSMSService></testclasses>

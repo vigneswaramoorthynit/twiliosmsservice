@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/aop
+           http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+	
+    <bean id="twilioSMSServiceSystemSetup" class="com.hybrisapp.twilioSMSService.setup.TwilioSMSServiceSystemSetup">
+        <!-- constructor arg injection example -->
+        <constructor-arg ref="twilioSMSServiceService"/>
+    </bean>
+
+    <bean id="twilioSMSServiceService" class="com.hybrisapp.twilioSMSService.service.impl.DefaultTwilioSMSServiceService">
+        <!-- setter injection example -->
+        <property name="modelService" ref="modelService"/>
+        <property name="mediaService" ref="mediaService"/>
+        <property name="flexibleSearchService" ref="flexibleSearchService"/>
+    </bean>
+
+<bean id="twilioSMSService" class="com.hybrisapp.twilioSMSService.service.impl.TwilioSMSServiceImpl" ></bean>
+			
+</beans>
